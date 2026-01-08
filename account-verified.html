@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#13ec5b",
+            "background-light": "#f6f8f6",
+            "background-dark": "#102216",
+            "charcoal": "#1a2e21",
+          },
+          fontFamily: {
+            "display": ["Inter"]
+          },
+          borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display antialiased">
+<div class="relative flex min-h-screen w-full flex-col overflow-x-hidden">
+<!-- Top Bar -->
+<div class="flex items-center bg-transparent p-4 pb-2 justify-between">
+<div class="text-white flex size-12 shrink-0 items-center justify-center">
+<span class="material-symbols-outlined text-white">close</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center pr-12">Fueling Futures</h2>
+</div>
+<!-- Main Content Area (Modal-like card) -->
+<div class="flex flex-1 items-center justify-center px-6 py-10">
+<!-- Success Card -->
+<div class="relative w-full max-w-md bg-charcoal dark:bg-[#1a2e21] rounded-xl p-8 shadow-2xl overflow-hidden border border-primary/10">
+<!-- Background Glow Effect -->
+<div class="absolute -top-24 -left-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-24 -right-24 w-48 h-48 bg-primary/10 rounded-full blur-3xl"></div>
+<!-- Confetti/Pattern Overlay -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" data-alt="subtle green dot pattern decoration" style="background-image: radial-gradient(#13ec5b 1px, transparent 1px); background-size: 24px 24px;">
+</div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<!-- Success Icon with Glowing Circle -->
+<div class="mb-8 flex items-center justify-center">
+<div class="relative">
+<div class="absolute inset-0 bg-primary/20 rounded-full blur-xl scale-125"></div>
+<div class="relative flex h-24 w-24 items-center justify-center rounded-full bg-primary/10 border-4 border-primary shadow-[0_0_20px_rgba(19,236,91,0.3)]">
+<span class="material-symbols-outlined text-primary !text-5xl font-bold">check</span>
+</div>
+</div>
+</div>
+<!-- Headline Text -->
+<h1 class="text-white tracking-tight text-3xl font-extrabold leading-tight pb-3">
+            Account Verified!
+          </h1>
+<!-- Body Text -->
+<p class="text-slate-300 text-base font-normal leading-relaxed pb-8 px-2">
+            Welcome to the community! You can now start planning your meals and requesting food support. Your journey to a better fueled future starts today.
+          </p>
+<!-- Primary Button -->
+<div class="w-full pt-4">
+<button class="flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-full h-14 px-5 bg-primary text-[#112217] text-lg font-bold leading-normal tracking-wide shadow-lg shadow-primary/20 active:scale-[0.98] transition-transform">
+<span class="truncate">Get Started</span>
+</button>
+</div>
+<!-- Secondary Link -->
+<div class="mt-6">
+<button class="text-primary/80 hover:text-primary text-sm font-semibold transition-colors">
+              Explore resources first
+            </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Illustration / Image (Optional touch) -->
+<div class="@container px-6 pb-12">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden rounded-xl min-h-[160px] opacity-40 mix-blend-screen" data-alt="abstract celebratory green light trails" style='background-image: linear-gradient(to bottom, transparent, #102216), url("https://lh3.googleusercontent.com/aida-public/AB6AXuC50Bg1SSFLzEFUzZBIXQr5fswOhaqQI6tAClUT8FIv0TUSqsp5yL2QZm-tNgB6vpCL5pwbf7wI1JztQaXlSeZDLglD3LSIiuLNjMJyX5CcQRDNbkxcaxpTPLg-8ZO8vBSvmNnlvFUxdSOKvPcHkHj6xZxO4l5-ozRuWBvanebCbzYsmauzR1nv9dRex44tjI-JeSykW2En0EJiOSrF0ZXXrSK1lMvrkWdNbIN2SF_3o6Ct29_LfaRHbQi-hVtRGusyqHlJaJnt3gZg");'>
+</div>
+</div>
+</div>
+</body></html>

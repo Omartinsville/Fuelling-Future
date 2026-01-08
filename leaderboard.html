@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Volunteer Leaderboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec5b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#102216",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .podium-gradient {
+            background: linear-gradient(180deg, rgba(19, 236, 91, 0.15) 0%, rgba(16, 34, 22, 0) 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white min-h-screen flex flex-col">
+<!-- Top Navigation Bar -->
+<div class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined cursor-pointer">arrow_back_ios</span>
+</div>
+<h2 class="text-lg font-bold leading-tight tracking-tight flex-1 text-center font-display">Leaderboard</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-primary/20 text-primary">
+<span class="material-symbols-outlined text-xl">share</span>
+</button>
+</div>
+</div>
+<!-- Segmented Control (Weekly/Monthly/All-time) -->
+<div class="flex px-4 py-3">
+<div class="flex h-11 flex-1 items-center justify-center rounded-full bg-slate-200 dark:bg-white/5 p-1">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm text-slate-500 dark:text-slate-400 has-[:checked]:text-primary text-sm font-semibold transition-all">
+<span class="truncate">Weekly</span>
+<input checked="" class="invisible w-0" name="timeframe" type="radio" value="Weekly"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm text-slate-500 dark:text-slate-400 has-[:checked]:text-primary text-sm font-semibold transition-all">
+<span class="truncate">Monthly</span>
+<input class="invisible w-0" name="timeframe" type="radio" value="Monthly"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-full px-2 has-[:checked]:bg-white dark:has-[:checked]:bg-background-dark has-[:checked]:shadow-sm text-slate-500 dark:text-slate-400 has-[:checked]:text-primary text-sm font-semibold transition-all">
+<span class="truncate">All-time</span>
+<input class="invisible w-0" name="timeframe" type="radio" value="All-time"/>
+</label>
+</div>
+</div>
+</div>
+<main class="flex-1 pb-32">
+<!-- Podium Section -->
+<div class="podium-gradient pt-8 pb-10 px-4">
+<div class="flex items-end justify-center gap-2 max-w-md mx-auto">
+<!-- Rank 2 -->
+<div class="flex flex-col items-center flex-1">
+<div class="relative mb-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-20 h-20 border-4 border-slate-300 dark:border-slate-700 shadow-lg" data-alt="Profile photo of Marcus, second place volunteer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDmQ0ohsg85aJe7DvrlC0TCU6YnnmhEYu8ou3T9gvS6sRZY4i234GZ7HNZTgUp-AMhshOQe0o6Cc6SwgB_lAfSW3yxntxwD195VGr5AYtNWxiwOdQQ_nLnSUFXr9ESKsRh8v2uzOSJmiT4B1yYCcMTeV144sUCu9KFdNTwe1CiM2NN56lNfzio-7ZWejCSX1dp48gIV8TF8Mow04hya_Ks4Xr-AlP6PYsSPfUxiX95_95kQr1V5Ix4s1utfuXjVrI37gXJtQdYOjkpJ");'>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-slate-300 dark:bg-slate-700 text-slate-900 dark:text-white text-xs font-bold px-2 py-0.5 rounded-full">#2</div>
+</div>
+<p class="font-bold text-sm">Marcus L.</p>
+<p class="text-primary text-xs font-semibold">982 Lives</p>
+</div>
+<!-- Rank 1 (Winner) -->
+<div class="flex flex-col items-center flex-1 -mt-4">
+<div class="relative mb-4">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 text-yellow-400 animate-bounce">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1">emoji_events</span>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-28 h-28 border-4 border-primary shadow-[0_0_20px_rgba(19,236,91,0.3)]" data-alt="Profile photo of Sarah J, top ranked volunteer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNR6zF277AfhufYdYjr4FHjv7zATcuzy7XyILuwrIS66lUM5dD_jWLU3BKR_lNO7S3iMdAjx2b0GyN4zG9iJPDK7DHkJPJpTHnAjCaTv1-gRXwjI2jGCIS5-jcMDtpgJb726jNveo9z2rNz5zNRMVAuvPUghNTFWxtl8EN9YJ0jjG0d0SHX5S8jk4QzUr-XzLePdl1_WVrGiSSmF58zMBGw_1-NMRlLb6NbQfoOQh65A3-JQvV-at1PXimne2eBa7ZRLg7DzH6AW8F");'>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-primary text-background-dark text-sm font-bold px-3 py-0.5 rounded-full">#1</div>
+</div>
+<p class="font-extrabold text-lg">Sarah J.</p>
+<p class="text-primary text-sm font-bold">1,240 Lives</p>
+</div>
+<!-- Rank 3 -->
+<div class="flex flex-col items-center flex-1">
+<div class="relative mb-3">
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full w-20 h-20 border-4 border-orange-400/50 dark:border-orange-800/50 shadow-lg" data-alt="Profile photo of Elena, third place volunteer" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCU4aUgiEFLZtj4VrX4k0J7pzrb5edoKVF64weMCrMydWMxp_lZLWbBhnW_cpUPWbO_au7wZAZlB_uxYpd95a9wk3yDEMXAvBarQehkW6gr3pgxOTUJJHlDX12zoCq9r-tSoFyFj7VTJfMr0RjhjOqnnM3bY0eFDicKo0UCNvpaPQ8cuL9fk_4oi2UWgbpACAoGM5pZKQcwzxpL6OOGAYzskloBLbUIOIXNrFGAUn_LxywBOFtNlRGUGSJkWLFIvFUjvDHl7A1LCh5N");'>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-orange-400 dark:bg-orange-800 text-white text-xs font-bold px-2 py-0.5 rounded-full">#3</div>
+</div>
+<p class="font-bold text-sm">Elena K.</p>
+<p class="text-primary text-xs font-semibold">845 Lives</p>
+</div>
+</div>
+</div>
+<!-- Ranking List Section Header -->
+<div class="px-4 py-4 flex items-center justify-between">
+<h3 class="text-lg font-bold tracking-tight font-display">Community Rankings</h3>
+<span class="text-xs text-slate-500 uppercase font-bold tracking-widest">Lives Fueled</span>
+</div>
+<!-- List of Volunteers -->
+<div class="px-4 flex flex-col gap-3">
+<!-- Rank 4 -->
+<div class="flex items-center gap-4 p-4 bg-white/5 dark:bg-white/5 rounded-xl border border-transparent hover:border-primary/20 transition-all">
+<span class="text-slate-400 font-bold w-4 text-center">4</span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 border-2 border-slate-700" data-alt="Volunteer avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC9RhtFqihROUEgD_8yi7G3HT1Ge_luujB68r1Ltlaumu83kxCBQluPonbzROzjMupzwURrlpHOJavBaX0pdfIBw_8Ok6Lo3PARzxCUdoY03nVusg4m-YVYwDp2pHW7E2Quopc9A0zEwYCdvvDKyVK-7AmYvRCE2dhdmx8vEfMozX_41omRL1nNLDaPOFsVMVIJV03xercXL1riDAAUf1LAAokIg1xmz82mgDPZOpeJo3WJaENUCIawOs_U5Hhy-7s1QkadGOvlYCBZ");'></div>
+<div class="flex-1">
+<p class="font-bold">David Chen</p>
+<p class="text-xs text-slate-500">Tier 3 Volunteer</p>
+</div>
+<div class="text-right">
+<p class="text-primary font-extrabold">721</p>
+</div>
+</div>
+<!-- Rank 5 -->
+<div class="flex items-center gap-4 p-4 bg-white/5 dark:bg-white/5 rounded-xl">
+<span class="text-slate-400 font-bold w-4 text-center">5</span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 border-2 border-slate-700" data-alt="Volunteer avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDLaOACuumyN5sZJoqipoFbK6xpksyo2N8xJ0R5ElgJcgG9Fv8OggjgVyle0Un0DvupxJ-bJJynQZ4LmiZsGz5M4a6Wqm1dHI90OSFJ3ombm7q13jLSRWyweG1hpBY9jtTgDcGZOu5L-rFQxxsQytzx6ILWCjXFfnXqAtM0tyZR_QPc5dUPlS_rfmI8egzZhxwhjuIVjSi_hEH3vHPOP2ub4Kh4Zxe9n_WycHfl5oZEfe86iyB65dvK7FtMtWCbwBZSfDBKsCHZkJvi");'></div>
+<div class="flex-1">
+<p class="font-bold">Maya Rodriguez</p>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary text-xs">trending_up</span>
+<p class="text-xs text-slate-500">Up 2 spots</p>
+</div>
+</div>
+<div class="text-right">
+<p class="text-primary font-extrabold">694</p>
+</div>
+</div>
+<!-- Rank 6 -->
+<div class="flex items-center gap-4 p-4 bg-white/5 dark:bg-white/5 rounded-xl">
+<span class="text-slate-400 font-bold w-4 text-center">6</span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 border-2 border-slate-700" data-alt="Volunteer avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7zkIYO0MXXAPCIbta08_DWYzwHuDf3FYbZ2HltIAwqK9d5ar-0U3CJQ0DJ8NLY_8pA7X74trQ02elvBISXgNn8jt5sevUuYxWDyFfzhB76dd1dq7K1hcKlUf9-Hv6EDAMfBgbLlmd3Yoqf8yrW1EGtlGmYsOrS8na8fX6cMgl4Bq91dQuuxQ8poy5mrKFhcUGDgaVWy5x9irs_cMDV7Fr7DXJoWsNOq2pMeumGcweEyE9Vv0p_uPeLm6D97Zfbu6Q5-HU3GZ87FEL");'></div>
+<div class="flex-1">
+<p class="font-bold">Kevin Smyth</p>
+<p class="text-xs text-slate-500">Community Leader</p>
+</div>
+<div class="text-right">
+<p class="text-primary font-extrabold">588</p>
+</div>
+</div>
+<!-- Rank 7 -->
+<div class="flex items-center gap-4 p-4 bg-white/5 dark:bg-white/5 rounded-xl">
+<span class="text-slate-400 font-bold w-4 text-center">7</span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 border-2 border-slate-700" data-alt="Volunteer avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAbyf9Y7Df7giBLT_k7S7mwOM06nopBUF0nNKp1uov7hh0upaoppPmomgBMS1iw-xVbcyOe7vFYuX0sJ36en2Ady5cam24ALpZLNXkGVaCUPl3iwzo2qC4yQ7iBVuLhPsc0UQ4NQvYYt9FnEH59uQywbh2CKjlyN5Cb-iEKJSYmpBzrdx8DF3ZvdAcNofaB2IOaGy8Uq4hoHtE3avpbTIxxMf32VFqWOjQGiaaF8sn86D6tVeqbA1jeXEWxOnfnAsV8VXfIGHwVEqRz");'></div>
+<div class="flex-1">
+<p class="font-bold">Leo Brooks</p>
+<p class="text-xs text-slate-500">Silver Contributor</p>
+</div>
+<div class="text-right">
+<p class="text-primary font-extrabold">542</p>
+</div>
+</div>
+<!-- Rank 8 -->
+<div class="flex items-center gap-4 p-4 bg-white/5 dark:bg-white/5 rounded-xl">
+<span class="text-slate-400 font-bold w-4 text-center">8</span>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full h-12 w-12 border-2 border-slate-700" data-alt="Volunteer avatar" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDEz_7fpJhGVWfgXM6Ac1jZkPIoI6ryN9kLFOSorx3tGrwEVygfxUcml2zSLxLWBhZWRbyZp1wepVrcjJZAJOMON-VHNjjL2FsPWSrZ4vMkIRhlodxtR6r7hGAg6v2eSTzdlgk_jjGM4SuCtIB0mB1sGM_G2tGmAz0-JtDjPWp8l-oOtdO-Ab2w9kl2gGPruFW-orZZn4oTmcCtXGJEyoTWPtYHMQwjGOKVTJCI339Fw_nv7nOgxF3-ggrOnP0pmsCJT3pd5AhYmi9T");'></div>
+<div class="flex-1">
+<p class="font-bold">Chloe Kim</p>
+<p class="text-xs text-slate-500">Reliable Partner</p>
+</div>
+<div class="text-right">
+<p class="text-primary font-extrabold">531</p>
+</div>
+</div>
+</div>
+</main>
+<!-- Sticky User Rank Status Card -->
+<div class="fixed bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-background-dark via-background-dark to-transparent pt-10">
+<div class="glass-card bg-primary text-background-dark rounded-xl p-4 shadow-2xl flex items-center gap-4 overflow-hidden relative">
+<!-- Decorative Glow -->
+<div class="absolute -right-8 -top-8 w-24 h-24 bg-white/20 rounded-full blur-2xl"></div>
+<div class="bg-background-dark text-primary rounded-full h-12 w-12 flex items-center justify-center font-black text-lg border-2 border-white/20">
+                12
+            </div>
+<div class="flex-1">
+<div class="flex items-center justify-between mb-1">
+<p class="text-sm font-black uppercase tracking-tight">You're doing great, Alex!</p>
+<p class="text-[10px] font-bold opacity-80">9/10 to Top 10</p>
+</div>
+<div class="w-full h-2 bg-background-dark/20 rounded-full overflow-hidden">
+<div class="bg-background-dark h-full rounded-full" style="width: 85%"></div>
+</div>
+<p class="text-xs mt-2 font-semibold">Feed 3 more families to break into the <span class="font-black">Top 10!</span></p>
+</div>
+<button class="bg-background-dark text-white p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-lg">chevron_right</span>
+</button>
+</div>
+<!-- iOS Home Indicator Spacing -->
+<div class="h-6"></div>
+</div>
+</body></html>

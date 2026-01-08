@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Volunteer Achievements - Fueling Futures</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#13ec5b",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#0A0A0A",
+                        "gold": "#FFD700",
+                        "silver": "#C0C0C0",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .hexagon {
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+        .glow-green { box-shadow: 0 0 15px rgba(19, 236, 91, 0.4); }
+        .glow-gold { box-shadow: 0 0 15px rgba(255, 215, 0, 0.4); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white min-h-screen">
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-white/10">
+<div class="flex items-center p-4 justify-between max-w-md mx-auto">
+<div class="text-slate-900 dark:text-white flex size-12 shrink-0 items-center justify-start">
+<span class="material-symbols-outlined cursor-pointer">arrow_back_ios</span>
+</div>
+<h2 class="text-slate-900 dark:text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Achievements</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex cursor-pointer items-center justify-center rounded-full h-10 w-10 bg-primary/10 text-primary">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-md mx-auto pb-20">
+<!-- Progress Header Section -->
+<section class="flex flex-col items-center pt-8 pb-4 px-4">
+<div class="relative flex items-center justify-center w-48 h-48">
+<!-- Circular Progress Ring (Simplified SVG) -->
+<svg class="absolute w-full h-full -rotate-90">
+<circle class="text-white/10" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-dasharray="553" stroke-dashoffset="138" stroke-width="8"></circle>
+</svg>
+<div class="flex flex-col items-center text-center">
+<span class="text-primary text-sm font-bold uppercase tracking-widest">Level 5</span>
+<h1 class="text-3xl font-extrabold mt-1">Hunger Hero</h1>
+<div class="flex items-center gap-1 mt-2 text-white/60">
+<span class="material-symbols-outlined text-sm">stars</span>
+<span class="text-sm font-medium">2,450 Total Pts</span>
+</div>
+</div>
+</div>
+<!-- XP Progress Bar -->
+<div class="w-full mt-8 px-4">
+<div class="flex justify-between items-end mb-2">
+<p class="text-sm font-medium text-white/70 tracking-wide uppercase">Next Rank: Global Guardian</p>
+<p class="text-xs font-normal text-white/50">2,450 / 3,000 XP</p>
+</div>
+<div class="h-3 w-full bg-white/10 rounded-full overflow-hidden">
+<div class="h-full bg-primary glow-green rounded-full transition-all duration-500" style="width: 82%;"></div>
+</div>
+</div>
+</section>
+<!-- Stats Cards -->
+<section class="flex flex-wrap gap-4 p-4">
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-5 bg-white/5 border border-white/10">
+<p class="text-white/60 text-xs font-semibold uppercase tracking-wider">Ranking</p>
+<div class="flex items-baseline gap-2">
+<p class="text-white tracking-tight text-2xl font-bold">Top 5%</p>
+<span class="text-primary text-xs font-bold">+2% this week</span>
+</div>
+</div>
+<div class="flex min-w-[158px] flex-1 flex-col gap-2 rounded-xl p-5 bg-white/5 border border-white/10">
+<p class="text-white/60 text-xs font-semibold uppercase tracking-wider">Deliveries</p>
+<div class="flex items-baseline gap-2">
+<p class="text-white tracking-tight text-2xl font-bold">124</p>
+<span class="text-white/40 text-xs">Meals served</span>
+</div>
+</div>
+</section>
+<!-- Achievements Section -->
+<section class="mt-4">
+<div class="flex items-center justify-between px-4 pb-2">
+<h3 class="text-white text-xl font-bold tracking-tight">Unlocked Badges</h3>
+<span class="text-primary text-xs font-bold uppercase">View All</span>
+</div>
+<!-- Hexagon Grid -->
+<div class="grid grid-cols-3 gap-y-8 gap-x-4 p-4 mt-2">
+<!-- Badge 1: Unlocked (Gold) -->
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-24 h-24 hexagon bg-gradient-to-br from-gold/80 to-amber-600 flex items-center justify-center relative shadow-lg glow-gold">
+<div class="absolute inset-1 hexagon bg-background-dark flex items-center justify-center">
+<span class="material-symbols-outlined text-gold text-4xl">workspace_premium</span>
+</div>
+</div>
+<p class="text-white text-[11px] font-bold text-center leading-tight">First Delivery</p>
+</div>
+<!-- Badge 2: Unlocked (Green) -->
+<div class="flex flex-col items-center gap-2 cursor-pointer">
+<div class="w-24 h-24 hexagon bg-gradient-to-br from-primary/80 to-emerald-700 flex items-center justify-center relative glow-green">
+<div class="absolute inset-1 hexagon bg-background-dark flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl">auto_awesome</span>
+</div>
+</div>
+<p class="text-white text-[11px] font-bold text-center leading-tight">5-Star Streak</p>
+</div>
+<!-- Badge 3: Unlocked (Silver) -->
+<div class="flex flex-col items-center gap-2 cursor-pointer">
+<div class="w-24 h-24 hexagon bg-gradient-to-br from-silver/80 to-slate-500 flex items-center justify-center relative">
+<div class="absolute inset-1 hexagon bg-background-dark flex items-center justify-center">
+<span class="material-symbols-outlined text-silver text-4xl">location_on</span>
+</div>
+</div>
+<p class="text-white text-[11px] font-bold text-center leading-tight">Local Legend</p>
+</div>
+<!-- Badge 4: Locked -->
+<div class="flex flex-col items-center gap-2 opacity-40">
+<div class="w-24 h-24 hexagon bg-white/10 flex items-center justify-center relative">
+<div class="absolute inset-1 hexagon bg-background-dark/80 flex items-center justify-center">
+<span class="material-symbols-outlined text-white/20 text-4xl">lock</span>
+</div>
+</div>
+<p class="text-white/40 text-[11px] font-medium text-center leading-tight">100 Deliveries</p>
+</div>
+<!-- Badge 5: Locked -->
+<div class="flex flex-col items-center gap-2 opacity-40">
+<div class="w-24 h-24 hexagon bg-white/10 flex items-center justify-center relative">
+<div class="absolute inset-1 hexagon bg-background-dark/80 flex items-center justify-center">
+<span class="material-symbols-outlined text-white/20 text-4xl">dark_mode</span>
+</div>
+</div>
+<p class="text-white/40 text-[11px] font-medium text-center leading-tight">Night Owl</p>
+</div>
+<!-- Badge 6: Locked -->
+<div class="flex flex-col items-center gap-2 opacity-40">
+<div class="w-24 h-24 hexagon bg-white/10 flex items-center justify-center relative">
+<div class="absolute inset-1 hexagon bg-background-dark/80 flex items-center justify-center">
+<span class="material-symbols-outlined text-white/20 text-4xl">bolt</span>
+</div>
+</div>
+<p class="text-white/40 text-[11px] font-medium text-center leading-tight">Weekly Warrior</p>
+</div>
+</div>
+</section>
+<!-- Tooltip Reveal (Simulated) -->
+<section class="mx-4 mt-8 p-6 bg-white/5 border border-primary/20 rounded-2xl relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 bg-primary/10 rounded-full -mr-8 -mt-8 blur-2xl"></div>
+<div class="flex gap-4 items-start relative z-10">
+<div class="size-10 rounded-full bg-primary/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">info</span>
+</div>
+<div class="flex-1">
+<p class="text-primary text-xs font-bold uppercase tracking-wider mb-1">Upcoming Milestone</p>
+<h4 class="text-white font-bold text-lg">Weekly Warrior Badge</h4>
+<p class="text-white/60 text-sm mt-1 leading-relaxed">
+                        Complete 10 deliveries in a single week to unlock this prestigious badge and 500 bonus XP.
+                    </p>
+<div class="mt-4 bg-white/10 rounded-full h-1.5 w-full">
+<div class="bg-primary h-full rounded-full" style="width: 40%;"></div>
+</div>
+<p class="text-[10px] text-white/40 mt-2 font-medium uppercase tracking-tighter">Current Progress: 4/10 Deliveries</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Bottom Navigation Tabs (iOS Style) -->
+<nav class="fixed bottom-0 left-0 right-0 bg-background-dark/90 backdrop-blur-xl border-t border-white/5 pb-6 pt-2">
+<div class="max-w-md mx-auto flex justify-around items-center">
+<button class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined">explore</span>
+<span class="text-[10px] font-medium">Explore</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined">receipt_long</span>
+<span class="text-[10px] font-medium">Deliveries</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-primary">
+<span class="material-symbols-outlined fill-current" style="font-variation-settings: 'FILL' 1">military_tech</span>
+<span class="text-[10px] font-bold">Awards</span>
+</button>
+<button class="flex flex-col items-center gap-1 text-white/40">
+<span class="material-symbols-outlined">person</span>
+<span class="text-[10px] font-medium">Profile</span>
+</button>
+</div>
+</nav>
+</body></html>

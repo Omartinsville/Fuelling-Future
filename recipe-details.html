@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Recipe Details - Fueling Futures</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#49ec13",
+                        "background-light": "#f6f8f6",
+                        "background-dark": "#0d140b",
+                        "surface-dark": "#1a2418",
+                        "deep-orange": "#e65100",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+        body {
+            min-height: max(884px, 100dvh);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-dark text-white min-h-screen">
+<div class="sticky top-0 z-50 bg-background-dark/90 backdrop-blur-md">
+<div class="flex items-center p-4 pb-2 justify-between">
+<div class="text-white flex size-12 shrink-0 items-center cursor-pointer">
+<span class="material-symbols-outlined">arrow_back_ios</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em] flex-1 text-center">Recipe Details</h2>
+<div class="flex w-12 items-center justify-end">
+<button class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 bg-transparent text-white gap-2 text-base font-bold leading-normal tracking-[0.015em] min-w-0 p-0">
+<span class="material-symbols-outlined">bookmark</span>
+</button>
+</div>
+</div>
+</div>
+<div class="@container px-4">
+<div class="w-full bg-center bg-no-repeat bg-cover flex flex-col justify-end overflow-hidden bg-slate-800 rounded-2xl min-h-80 shadow-2xl" data-alt="A steaming bowl of vibrant orange smoky jollof rice with fried plantain" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuClAaUDZWLWCASpGVHtjK6hZRlGrEa5uIg9UGItZW4RANl-aWg7G72t-twiTfTTyFSRO6tSIAzk-AWrs2jPKruCQxDKdXueP7tq9y_nHzL02GJDKYhu9I-SF9iPoUZUeUCu5lV7GtvEZgBBEDsqB7PzWvlJySJeZYd9igVM3FE_fD1lWyA1z7r5hWFA877U_Sta6bU_aDjkWTHVB399ClrUiLHzRDu7utkGtt2lz207ig0cHxRT_xXjyC0e9E9LdTuCaEP3bT5wxMCa");'>
+</div>
+</div>
+<div class="px-4 pt-6">
+<h1 class="text-white tracking-tight text-[32px] font-bold leading-tight">One-Pot Smoky Jollof Rice</h1>
+<p class="text-slate-400 text-sm mt-1">A classic Nigerian favorite optimized for student budgets.</p>
+</div>
+<div class="flex flex-wrap gap-3 p-4">
+<div class="flex min-w-[100px] flex-1 flex-col gap-1 rounded-xl p-4 border border-white/10 bg-surface-dark">
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-sm">schedule</span>
+<p class="text-xs font-medium uppercase tracking-wider">Prep Time</p>
+</div>
+<p class="text-white text-xl font-bold">45 mins</p>
+</div>
+<div class="flex min-w-[100px] flex-1 flex-col gap-1 rounded-xl p-4 border border-white/10 bg-surface-dark">
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-sm">local_fire_department</span>
+<p class="text-xs font-medium uppercase tracking-wider">Calories</p>
+</div>
+<p class="text-white text-xl font-bold">550 kcal</p>
+</div>
+<div class="flex min-w-[100px] flex-1 flex-col gap-1 rounded-xl p-4 border border-primary/20 bg-surface-dark">
+<div class="flex items-center gap-2 text-slate-400">
+<span class="material-symbols-outlined text-sm">payments</span>
+<p class="text-xs font-medium uppercase tracking-wider">Budget</p>
+</div>
+<p class="text-primary text-xl font-bold">Low Cost</p>
+</div>
+</div>
+<div class="px-4 py-3 sticky top-[68px] z-40 bg-background-dark/95 backdrop-blur-sm">
+<div class="flex h-12 flex-1 items-center justify-center rounded-xl bg-white/5 p-1.5">
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-primary transition-all duration-200">
+<span class="text-slate-400 font-semibold text-sm has-[:checked]:text-background-dark">Ingredients</span>
+<input checked="" class="hidden" name="recipe-tabs" type="radio" value="Ingredients"/>
+</label>
+<label class="flex cursor-pointer h-full grow items-center justify-center overflow-hidden rounded-lg px-2 has-[:checked]:bg-primary transition-all duration-200">
+<span class="text-slate-400 font-semibold text-sm has-[:checked]:text-background-dark">Instructions</span>
+<input class="hidden" name="recipe-tabs" type="radio" value="Instructions"/>
+</label>
+</div>
+</div>
+<div class="px-4 pb-10">
+<div class="space-y-4" id="ingredients-section">
+<div class="flex items-center justify-between py-2">
+<h3 class="text-lg font-bold">Pantry Check</h3>
+<span class="text-xs bg-primary/20 text-primary px-2 py-1 rounded-full font-bold">5 items in stock</span>
+</div>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-4 rounded-xl bg-primary/10 border border-primary/30">
+<div class="flex items-center gap-3">
+<div class="size-6 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-background-dark text-xs font-bold">check</span>
+</div>
+<span class="text-white font-medium">2 cups Parboiled Rice</span>
+</div>
+<span class="text-[10px] font-bold uppercase text-primary">In Pantry</span>
+</div>
+<div class="flex items-center justify-between p-4 rounded-xl bg-surface-dark border border-white/10">
+<div class="flex items-center gap-3">
+<div class="size-6 rounded-full border-2 border-slate-600"></div>
+<span class="text-white font-medium">1 Tin Tomato Paste (70g)</span>
+</div>
+<span class="text-[10px] font-bold uppercase text-slate-500">Need to buy</span>
+</div>
+<div class="flex items-center justify-between p-4 rounded-xl bg-primary/10 border border-primary/30">
+<div class="flex items-center gap-3">
+<div class="size-6 rounded-full bg-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-background-dark text-xs font-bold">check</span>
+</div>
+<span class="text-white font-medium">Vegetable Oil</span>
+</div>
+<span class="text-[10px] font-bold uppercase text-primary">In Pantry</span>
+</div>
+<div class="flex items-center justify-between p-4 rounded-xl bg-surface-dark border border-white/10">
+<div class="flex items-center gap-3">
+<div class="size-6 rounded-full border-2 border-slate-600"></div>
+<span class="text-white font-medium">2 Scotch Bonnet Peppers</span>
+</div>
+<span class="text-[10px] font-bold uppercase text-slate-500">Need to buy</span>
+</div>
+</div>
+</div>
+<div class="mt-8 space-y-6" id="instructions-section">
+<h3 class="text-lg font-bold mb-4">Cooking Steps</h3>
+<div class="flex gap-4 p-4 rounded-xl bg-surface-dark border border-white/5">
+<div class="flex-none size-8 rounded-full bg-primary flex items-center justify-center font-bold text-background-dark">1</div>
+<div class="flex-1">
+<p class="text-white text-base leading-relaxed font-medium">Blend the tomatoes, red bell peppers, scotch bonnets, and onions until smooth. Boil the mixture in a pot until the excess water evaporates.</p>
+</div>
+</div>
+<div class="flex gap-4 p-4 rounded-xl bg-surface-dark border border-white/5">
+<div class="flex-none size-8 rounded-full bg-primary flex items-center justify-center font-bold text-background-dark">2</div>
+<div class="flex-1">
+<p class="text-white text-base leading-relaxed font-medium">Heat the vegetable oil and fry sliced onions until golden. Add the tomato paste and fry for 5 minutes until the oil separates.</p>
+</div>
+</div>
+</div>
+<div class="mt-10 p-5 rounded-2xl bg-deep-orange text-white shadow-lg">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined">lightbulb</span>
+<h4 class="font-bold text-sm uppercase tracking-wider">Nutrition Tip</h4>
+</div>
+<p class="text-white text-sm font-medium italic leading-relaxed">
+                "Adding a handful of spinach or fluted pumpkin leaves (Ugu) at the very end boosts your iron and fiber intake without changing the classic smoky flavor profile!"
+            </p>
+</div>
+<div class="mt-8">
+<button class="w-full bg-primary hover:bg-primary/90 text-background-dark font-bold py-4 rounded-xl transition-colors flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">shopping_cart</span>
+                Add missing items to list
+            </button>
+</div>
+</div>
+<div class="h-10"></div>
+
+</body></html>
